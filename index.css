@@ -1,0 +1,144 @@
+
+*{
+    box-sizing: border-box;
+}
+body{
+    font-family: "source sans pro", sans-serif;
+    font-size: 1rem;
+    text-align: center;
+    margin: 0;
+    color: #505050;
+}
+h1{
+    font-size: 2.25rem;
+    font-weight: 400;
+    color: #fff;
+    margin: 0;
+}
+h1 + p{
+    color: #f18119;
+    font-size: 1.32rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    margin: 0;
+}
+.top-text{
+    color: #f18119;
+    font-size: .62rem;
+    font-weight: 900;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin: 0;
+    border-top: 5px solid #f18119;
+    border-image: linear-gradient(to left, #ff7138, #ffa51d) 1;
+}
+.bold-text{
+    font-weight: 900;
+}
+h2{
+    font-size: 1.32rem;
+    margin-top: 0;
+    margin-bottom: 0;   
+}
+h2 + p{
+    color: #f18119;
+    font-size: 1rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    margin-top: 0;
+}
+.disclaimer{
+    font-size: .62rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+.message-to-user{
+    font-size: .62rem;    
+    letter-spacing: 1px;
+}
+.title{
+    background: 
+    linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), 
+    url(zen.jpg);  
+    background-size: cover;
+    background-position: center;
+    background-color: #404040;
+    padding: 0 .25em 3em;
+    display: flex;
+    flex-direction: column;
+    min-height: 50vh;
+    justify-content: space-between;
+}
+.top-text{
+    order: -1;
+    
+}
+.registration{
+    padding: 3em 1em;
+}
+.title *, .registration *{
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.registration-form{
+    max-width: 250px;
+    width: 80%;
+}
+input, button{
+    width: 100%;
+    margin-top: .7em;
+    padding: .4em;
+    text-align: inherit;
+    font-family: inherit;
+    border: 1px solid #404040;
+    border-radius: 2px;
+    transform: scale(1);
+    transition: transform 300ms;
+    
+}
+input:focus{
+    transform: scale(1.05);
+}
+
+button{
+    display: inline-block;
+    font-size: .68rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: .8em;
+    border: none;
+    cursor: pointer;
+    background: linear-gradient(to left, #ff7138, #ffa51d);
+    color: #fff;
+    
+}
+button:hover, button:focus{
+    transform: scale(1.05);
+}
+@media (min-width:730px){
+    body{        
+        font-size: 1.125rem;
+        display: flex;
+    }
+    .title, 
+    .registration{
+        width: 50%;
+        min-height: 100vh;
+        
+    }
+    .registration{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    
+    h1{
+        font-size: 3.5rem;
+    }
+    h2, h1 + p{
+        font-size: 1.75rem;
+    }
+        
+}

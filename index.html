@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="title">
+        
+        <h1>Learn how to make your mind<span class="bold-text"> still </span>and <span class="bold-text">insightful</span></h1>
+        <p>Join us for this live webinar</p>
+        <p class="top-text">stilling the mind</p>
+    </div>
+
+    <div id="mainContent" class="registration">
+        <h2>Become a meditation master!</h2>
+
+         <p>Register Today</p>
+
+         <p>Meditation isn't just focusing the mind. It's a practice  to train attention and awareness, and achieve a mentally clear and emotionally calm and stable state!</p>
+
+         <form action="#" mathod="POST" class="registration-form" id="emailCollector">
+             <input name="firstName" type="text" placeholder="first name" required>
+             <input name="emailAddress" type="email" placeholder="email" required>
+             <button type="submit">Register</button>
+
+         </form>
+        <p class="disclaimer">We'll never share your information without your permission</p>
+    </div>
+    <script>
+        let formCollector = document.getElementById("emailCollector")
+        formCollector.addEventListener("submit", event => {
+            event.preventDefault()
+            let ourFormData = new FormData(event.target)
+            let userFirstName = ourFormData.get("firstName")
+            let userEmailAddress = ourFormData.get("emailAddress")
+            let updatedHtml = `
+            <h2>Congratulation, ${userFirstName}!</h2>
+            <p>you are on the way to become BBQ master!</p>
+            <p class="message-to-user">You will get weeky BBQ tips sent on: ${userEmailAddress}</p>
+            ` 
+            document.getElementById("mainContent").innerHTML = updatedHtml
+        })
+
+    </script>
+</body>
+</html>
